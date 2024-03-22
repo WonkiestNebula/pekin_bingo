@@ -36,19 +36,18 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
+    
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          version: 8
-
-      - name: Install dependencies
-        run: pnpm i
-        
-      - name: Build dependencies
-        run: pnpm build
-          
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm i
+      - run: npm run build
+      
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
