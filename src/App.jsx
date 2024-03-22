@@ -21,12 +21,15 @@ for (let i = 0; i < 5; i++) {
 const App = () => {
   console.log(bingo);
   return (
-    <div className="bg-slate-900">
+    <div className="">
       <div className="w-full content-center text-center">
-        <h1 className="text-7xl text-green-50">Pekin Bingo</h1>
+        <h1 className="mb-5 text-7xl text-green-50">Pekin Bingo</h1>
       </div>
       <div className="flex flex-col">
-        <div className="flex h-[min(100dvh-72px,100dvw)] w-[min(100dvh-72px,100dvw)] snap-center flex-col place-self-center self-center sm:p-10">
+        <div
+          className="flex h-[min(100dvh-72px,100dvw)] w-[min(100dvh-72px,100dvw)] 
+                        snap-center flex-col place-self-center self-center pr-1 sm:p-10"
+        >
           <div className="h-full w-full flex-1 rounded-lg">
             {bingo.map((row, i) => {
               let firstRounded;
