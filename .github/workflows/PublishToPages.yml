@@ -42,10 +42,6 @@ jobs:
         - name: Install dependencies
           run: pnpm i
           
-  build:
-      runs-on: ubuntu-latest
-
-      steps:
         - name: Build dependencies
           run: pnpm build
           
