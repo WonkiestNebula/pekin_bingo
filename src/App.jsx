@@ -26,8 +26,8 @@ const App = () => {
         <h1 className="text-7xl text-green-50">Pekin Bingo</h1>
       </div>
       <div className="flex flex-col">
-        <div className="flex h-[calc(100dvh-72px)] w-[calc(100dvh-72px)] snap-center flex-col place-self-center self-center pb-10 pl-10 pr-10 pt-10">
-          <div className="h-full w-full min-w-52 flex-1 rounded-lg">
+        <div className="flex h-[min(100dvh-72px,100dvw)] w-[min(100dvh-72px,100dvw)] snap-center flex-col place-self-center self-center sm:p-10">
+          <div className="h-full w-full flex-1 rounded-lg">
             {bingo.map((row, i) => {
               let firstRounded;
               if (i === 0) {
