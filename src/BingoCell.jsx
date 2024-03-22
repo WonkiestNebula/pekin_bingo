@@ -1,25 +1,30 @@
 import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-const BingoCell = ({ label }) => {
+const BingoCell = ({ label, rounded }) => {
   const [isMarked, setIsMarked] = useState(false);
 
   if (isMarked) {
     return (
       <div
-        className="flex w-1/5 cursor-pointer items-center justify-center border border-green-600 bg-green-500 text-slate-800 hover:bg-green-400 hover:text-slate-900"
+        className={`flex w-1/5 cursor-pointer select-none items-center justify-center text-balance
+                    ${rounded ?? ""} rounded-br-lg border border-green-600 bg-green-500 p-2
+                    font-sans text-xl font-medium text-slate-800 hover:bg-green-400 hover:text-slate-900`}
         onClick={() => setIsMarked(false)}
       >
-        <span className="text-center">{label ?? "NOTHING HERE YET"}</span>
+        <span className="text-center">{label}</span>
       </div>
     );
   }
   return (
     <div
-      className="flex w-1/5 cursor-pointer items-center justify-center border border-slate-200 bg-slate-800 text-pink-100 hover:bg-slate-700 hover:text-pink-200"
+      className={`flex w-1/5 cursor-pointer select-none items-center justify-center
+                  text-balance border border-slate-200 bg-slate-800 p-2 font-sans
+                  text-xl font-medium text-white hover:bg-slate-700 hover:text-green-200
+                  ${rounded ?? ""}`}
       onClick={() => setIsMarked(true)}
     >
-      <span className="text-center">{label ?? "NOTHING HERE YET"}</span>
+      <span className="select-none text-center">{label}</span>
     </div>
   );
 };

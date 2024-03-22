@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.top-right {
+  @apply rounded-tr-lg;
+}
+
+.top-left {
+  @apply rounded-tl-lg;
+}
+
+.bottom-right {
+  @apply rounded-br-lg;
+}
+
+.bottom-left {
+  @apply rounded-bl-lg;
+}
