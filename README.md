@@ -1,2 +1,3 @@
-# pekin_bingo
+# Pekinwoof Bingo
+
 Bingo for Pekinwoof
