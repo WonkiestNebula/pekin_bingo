@@ -1,4 +1,3 @@
-import "./App.css";
 import BingoCell from "./BingoCell";
 import pekinisms from "./pekinisms.json";
 
