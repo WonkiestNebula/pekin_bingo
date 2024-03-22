@@ -27,5 +27,8 @@ jobs:
           with:
             version: 8
 
+        - name: Install dependencies
+          run: pnpm i
+
         - name: Build dependencies
           run: pnpm build
