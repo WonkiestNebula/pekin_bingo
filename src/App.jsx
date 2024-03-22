@@ -43,6 +43,8 @@ const App = () => {
                       rounded = firstRounded + "-left";
                     } else if (j === 4 && firstRounded) {
                       rounded = firstRounded + "-right";
+                    } else {
+                      rounded = undefined;
                     }
                     return <BingoCell key={j} label={cell} rounded={rounded} />;
                   })}

@@ -8,8 +8,8 @@ const BingoCell = ({ label, rounded }) => {
     return (
       <div
         className={`flex w-1/5 cursor-pointer select-none items-center justify-center text-balance
-                    ${rounded ?? ""} rounded-br-lg border border-green-600 bg-green-500 p-2
-                    font-sans text-xl font-medium text-slate-800 hover:bg-green-400 hover:text-slate-900`}
+                    ${rounded ?? ""} border border-green-600 bg-green-500 p-2
+                    font-sans text-lg text-slate-800 hover:bg-green-400 hover:text-slate-900`}
         onClick={() => setIsMarked(false)}
       >
         <span className="text-center">{label}</span>
@@ -20,7 +20,7 @@ const BingoCell = ({ label, rounded }) => {
     <div
       className={`flex w-1/5 cursor-pointer select-none items-center justify-center
                   text-balance border border-slate-200 bg-slate-800 p-2 font-sans
-                  text-xl font-medium text-white hover:bg-slate-700 hover:text-green-200
+                  text-lg text-white hover:bg-slate-700 hover:text-green-200
                   ${rounded ?? ""}`}
       onClick={() => setIsMarked(true)}
     >
