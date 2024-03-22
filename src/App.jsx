@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="">
       <div className="w-full content-center text-center">
-        <h1 className="mb-5 text-7xl text-green-50">Pekin Bingo</h1>
+        <h1 className="mb-5 text-7xl text-green-50 md:mb-0">Pekin Bingo</h1>
       </div>
       <div className="flex flex-col">
         <div
